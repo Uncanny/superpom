@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<additionalHeaders>
+	<cmd_style>
+		<firstLine>::</firstLine>
+		<beforeEachLine>:: </beforeEachLine>
+		<endLine>::EOL</endLine>
+		<firstLineDetectionPattern>::$</firstLineDetectionPattern>
+		<lastLineDetectionPattern>::$</lastLineDetectionPattern>
+		<allowBlankLines>true</allowBlankLines>
+		<isMultiline>true</isMultiline>
+	</cmd_style>
+</additionalHeaders>
