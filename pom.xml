@@ -333,7 +333,7 @@
 
 	<profiles>
 		<profile>
-			<id>release</id>
+			<id>uncanny-release</id>
 			<build>
 				<plugins>
 					<plugin>
