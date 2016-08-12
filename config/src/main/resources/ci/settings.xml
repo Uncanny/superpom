@@ -39,8 +39,9 @@
 				<gpg.defaultKeyring>false</gpg.defaultKeyring>
 				<gpg.keyname>${env.KEYNAME}</gpg.keyname>
 				<gpg.passphrase>${env.PASSPHRASE}</gpg.passphrase>
-				<gpg.publicKeyring>${codebase.directory}${file.separator}local.pubring.gpg</gpg.publicKeyring>
-				<gpg.secretKeyring>${codebase.directory}${file.separator}local.secring.gpg</gpg.secretKeyring>
+				<gpg.useagent>false</gpg.useagent>
+				<gpg.publicKeyring>uncanny.pubring.gpg</gpg.publicKeyring>
+				<gpg.secretKeyring>uncanny.secring.gpg</gpg.secretKeyring>
 			</properties>
 		</profile>
 		<profile>

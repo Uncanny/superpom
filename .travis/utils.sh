@@ -75,10 +75,11 @@ function prepareBuild() {
       beginSensibleBlock
 
       echo "Preparing Build's bill-of-materials..."
-      echo "- Decrypting private key..."
-      openssl aes-256-cbc -pass pass:"$2" -in config/src/main/resources/ci/secring.gpg.enc -out local.secring.gpg -d
-      echo "- Decrypting public key..."
-      openssl aes-256-cbc -pass pass:"$2" -in config/src/main/resources/ci/pubring.gpg.enc -out local.pubring.gpg -d
+      gpgHome=$(dirname `gpg --list-keys | head -n 1`)
+      echo "- Decrypting private key to $gpgHome..."
+      openssl aes-256-cbc -pass pass:"$2" -in config/src/main/resources/ci/secring.gpg.enc -out $gpgHome/uncanny.secring.gpg -d
+      echo "- Decrypting public key to $gpgHome..."
+      openssl aes-256-cbc -pass pass:"$2" -in config/src/main/resources/ci/pubring.gpg.enc -out $gpgHome/uncanny.pubring.gpg -d
 
       endSensibleBlock
     else
