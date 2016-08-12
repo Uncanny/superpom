@@ -846,18 +846,6 @@
 							</resources>
 						</configuration>
 					</execution>
-					<execution>
-						<id>timestamp-property</id>
-						<phase>process-sources</phase>
-						<goals>
-							<goal>timestamp-property</goal>
-						</goals>
-						<configuration>
-							<name>currentYear</name>
-							<pattern>yyyy</pattern>
-							<units>year</units>
-						</configuration>
-					</execution>
 				</executions>
 			</plugin>
 
@@ -932,7 +920,6 @@
 				<executions>
 					<execution>
 						<id>signature-check</id>
-						<phase>verify</phase>
 						<goals>
 							<goal>check</goal>
 						</goals>
