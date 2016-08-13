@@ -133,7 +133,7 @@ then
   set -x
 fi
 
-server=http://www.smartdeveloperhub.org/sonar/
+server=${SONARQUBE_INSTANCE}
 
 case "${CI}" in
   skip      ) skipBuild ;;
