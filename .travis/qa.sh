@@ -58,10 +58,20 @@ function checkWithWget() {
 function checkSonarQubeServer() {
   echo "Checking SonarQube Server..."
 
-  case "${CHECKER}" in
-    curl ) checkWithCurl "$1";;
-    *    ) checkWithWget "$1";;
-  esac
+  where wget &>/dev/null
+  if [ "$?" = "0" ];
+  then
+    checkWithWget "$1"
+  else
+    where curl &>/dev/null
+    if [ "$?" = "0" ];
+    then
+      checkWithCurl "$1"
+    else
+      echo "No means available for checking SonarQube Server availability"
+      return 3
+    fi
+  fi
 
   error=$?
   if [ "$error" = "0" ];
