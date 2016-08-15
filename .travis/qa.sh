@@ -58,12 +58,12 @@ function checkWithWget() {
 function checkSonarQubeServer() {
   echo "Checking SonarQube Server..."
 
-  where wget &>/dev/null
+  which wget &>/dev/null
   if [ "$?" = "0" ];
   then
     checkWithWget "$1"
   else
-    where curl &>/dev/null
+    which curl &>/dev/null
     if [ "$?" = "0" ];
     then
       checkWithCurl "$1"
