@@ -165,6 +165,11 @@
 		<cucumber.version>1.2.4</cucumber.version>
 		<ehcache.version>3.1.1</ehcache.version>
 		<javax.cache.version>1.0.0</javax.cache.version>
+		<javax.inject.version>1</javax.inject.version>
+		<javax.enterprise.version>1.2</javax.enterprise.version>
+		<weld.version>2.3.5.Final</weld.version>
+		<deltaspike.version>1.7.1</deltaspike.version>
+		<guice.version>4.0.1</guice.version>
 
 		<sonar.java.plugin.version>3.2</sonar.java.plugin.version>
 
@@ -502,6 +507,102 @@
 				<artifactId>caffeine</artifactId>
 				<version>${caffeine.version}</version>
 			</dependency>
+
+			<!--  Dependency Injection Support -->
+
+			<!--  JSR-330 API -->
+			<dependency>
+				<groupId>javax.inject</groupId>
+				<artifactId>javax.inject</artifactId>
+				<version>${javax.inject.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.google.inject</groupId>
+				<artifactId>guice</artifactId>
+				<version>${guice.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.google.inject</groupId>
+				<artifactId>guice</artifactId>
+				<version>${guice.version}</version>
+				<classifier>no_aop</classifier>
+			</dependency>
+			<dependency>
+				<groupId>com.google.inject.extensions</groupId>
+				<artifactId>guice-servlet</artifactId>
+				<version>${guice.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.google.inject.extensions</groupId>
+				<artifactId>guice-persist</artifactId>
+				<version>${guice.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.google.inject.extensions</groupId>
+				<artifactId>guice-jmx</artifactId>
+				<version>${guice.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.google.inject.extensions</groupId>
+				<artifactId>guice-jndi</artifactId>
+				<version>${guice.version}</version>
+			</dependency>
+
+			<!--  Contexts & Dependency Injection Support -->
+
+			<!-- JSR-346 API bundle -->
+			<dependency>
+				<groupId>javax.enterprise</groupId>
+				<artifactId>cdi-api</artifactId>
+				<version>${javax.enterprise.version}</version>
+				<scope>provided</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.jboss.weld.se</groupId>
+				<artifactId>weld-se</artifactId>
+				<version>${weld.version}</version>
+				<scope>runtime</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.jboss.weld.se</groupId>
+				<artifactId>weld-se-shaded</artifactId>
+				<version>${weld.version}</version>
+				<scope>runtime</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.jboss.weld.servlet</groupId>
+				<artifactId>weld-servlet-core</artifactId>
+				<version>${weld.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.jboss.weld.servlet</groupId>
+				<artifactId>weld-servlet-shaded</artifactId>
+				<version>${weld.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.deltaspike.distribution</groupId>
+				<artifactId>distributions-bom</artifactId>
+				<version>${deltaspike.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+
+			<!-- Bootstrap CDI with DeltaSpike and Weld -->
+			<!--
+			<dependency>
+				<groupId>org.apache.deltaspike.cdictrl</groupId>
+				<artifactId>deltaspike-cdictrl-api</artifactId>
+				<scope>compile</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.deltaspike.cdictrl</groupId>
+				<artifactId>deltaspike-cdictrl-weld</artifactId>
+				<scope>runtime</scope>
+			</dependency>
+			-->
 
 			<!-- Database support dependencies -->
 
