@@ -48,7 +48,9 @@
 
 	<name>Uncanny :: Build Configuration</name>
 
-	<description>Uncanny Build Configuration</description>
+	<description>Uncanny Super POM Build Configuration</description>
+
+	<url>http://uncanny.io/superpom/</url>
 
 	<!-- =================================================================== -->
 	<!--   BUILD SETTINGS                                                    -->
@@ -70,13 +72,11 @@
 
 		<!-- License templating -->
 		<license.project.name>Uncanny Super-POM</license.project.name>
-		<license.project.url>http://uncanny.io/superpom/</license.project.url>
+		<license.project.url>${project.url}</license.project.url>
 		<license.project.owner>${project.organization.name}</license.project.owner>
 		<license.project.inceptionYear>${project.inceptionYear}</license.project.inceptionYear>
 		<license.organization.name>${project.organization.name}</license.organization.name>
 		<license.organization.url>${project.organization.url}</license.organization.url>
-		<license.artifact>${project.groupId}:${project.artifactId}:${project.version}</license.artifact>
-		<license.bundle>${project.build.finalName}.${project.packaging}</license.bundle>
 
 		<!-- Code Coverage configuration -->
 		<coverage.reports.dir>${project.build.directory}${file.separator}coverage-reports</coverage.reports.dir>
@@ -169,7 +169,7 @@
 		<javax.enterprise.version>1.2</javax.enterprise.version>
 		<weld.version>2.3.5.Final</weld.version>
 		<deltaspike.version>1.7.1</deltaspike.version>
-		<guice.version>4.0.1</guice.version>
+		<guice.version>4.1.0</guice.version>
 
 		<sonar.java.plugin.version>3.2</sonar.java.plugin.version>
 

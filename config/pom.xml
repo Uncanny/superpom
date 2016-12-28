@@ -47,20 +47,24 @@
 
 	<name>Uncanny :: Build Resources</name>
 
-	<description>Uncanny Build Resources</description>
+	<description>Uncanny Super POM Build Resources</description>
+
+	<url>http://uncanny.io/superpom/</url>
+
+	<!-- =================================================================== -->
+	<!--   BUILD SETTINGS                                                    -->
+	<!-- =================================================================== -->
 
 	<properties>
 		<config.dir>${basedir}${file.separator}src${file.separator}main${file.separator}resources</config.dir>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<!-- License templating -->
 		<license.project.name>Uncanny Super-POM</license.project.name>
-		<license.project.url>http://uncanny.io/superpom/</license.project.url>
+		<license.project.url>${project.url}</license.project.url>
 		<license.project.owner>${project.organization.name}</license.project.owner>
 		<license.project.inceptionYear>${project.inceptionYear}</license.project.inceptionYear>
 		<license.organization.name>${project.organization.name}</license.organization.name>
 		<license.organization.url>${project.organization.url}</license.organization.url>
-		<license.artifact>${project.groupId}:${project.artifactId}:${project.version}</license.artifact>
-		<license.bundle>${project.build.finalName}.${project.packaging}</license.bundle>
 	</properties>
 
 	<build>

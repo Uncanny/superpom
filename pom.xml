@@ -41,13 +41,13 @@
 	<!--   PROJECT INFORMATION                                               -->
 	<!-- =================================================================== -->
 
-	<name>Uncanny :: Super POM</name>
+	<name>Uncanny -- Super POM</name>
 
-	<description>Parent POM for Uncanny projects</description>
+	<description>Super POM for the Uncanny Software Projects</description>
 
 	<inceptionYear>2016</inceptionYear>
 
-	<url>http://uncanny.io/</url>
+	<url>http://uncanny.io/superpom/</url>
 
 	<!-- Project license -->
 
